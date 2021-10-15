@@ -1,7 +1,35 @@
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 public class EmployeeFactory {
     static private long id = 1;
+//    public static void main(String[] args) {
+//        Map<String, String> map = new HashMap<>();
+//        map.put("Serhii", "Male");
+//        map.put("Petr", "Male");
+//        map.put("Serhii", "Male");
+//        map.put("Tolik", "Male");
+//        map.put("Ivan", "Male");
+//        map.put("Kolya", "Male");
+//        map.put("Andrii", "Male");
+//        map.put("Roman", "Male");
+//        map.put("Sveta", "Female");
+//        map.put("Anya", "Female");
+//        map.put("Mariya", "Female");
+//        map.put("Lisa", "Female");
+//        map.put("Daryna", "Female");
+//        map.put("Katya", "Female");
+//        map.put("Vika", "Female");
+//
+//
+//        for (Map.Entry<String, String> elements : map.entrySet()) {
+//            name = elements.getKey();
+//            gender = elements.getValue();
+//        }
+//    }
+
+
 
     public String generateName(String gender) {
         String[] manNames = {"Serhii", "Petr", "Tolik", "Ivan", "Kolya", "Andrii", "Roman"};
@@ -32,7 +60,6 @@ public class EmployeeFactory {
         double salary = (int) (minSalary + (Math.random() * maxSalary));
         int fixedBugs = random.nextInt(15);
         double defaultBugRate = 7;
-
         return new Employee(id++, generateName(generateGender()), age, salary, generateGender(), fixedBugs, defaultBugRate);
     }
 
@@ -43,5 +70,4 @@ public class EmployeeFactory {
         }
         return employees;
     }
-
 }

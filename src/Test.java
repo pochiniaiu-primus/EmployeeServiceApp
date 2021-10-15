@@ -58,5 +58,10 @@ public class Test {
         service.sortByNameAndSalary();
         service.printEmployees();
         System.out.println("====================================");
+        //edit
+        Employee employeeNew = new Employee(1, "Olena", 25, 1500, "Female", 5, 15);
+        service.edit(employeeNew);
+        service.printEmployees();
+        System.out.println();
     }
 }

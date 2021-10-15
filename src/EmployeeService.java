@@ -108,4 +108,15 @@ public class EmployeeService {
         return employees;
     }
 
+    //bubble sort
+    Employee edit(Employee newEmployee) {
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i].getId() == newEmployee.getId()) {
+                Employee temp = employees[i];
+                employees[i] = newEmployee;
+                return temp;
+            }
+        }
+        return null;
+    }
 }
