@@ -1,13 +1,13 @@
-public class Employee {
+public class Employee implements Comparable<Employee> {
     long id;
     String name;
     int age;
     double salary;
-    char gender;
+    String gender;
     int fixedBugs;
     double defaultBugRate;
 
-    public Employee(long id, String name, int age, double salary, char gender, int fixedBugs, double defaultBugRate) {
+    public Employee(long id, String name, int age, double salary, String gender, int fixedBugs, double defaultBugRate) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -41,7 +41,7 @@ public class Employee {
     }
 
 
-    public char getGender() {
+    public String getGender() {
         return gender;
     }
 
@@ -67,5 +67,10 @@ public class Employee {
                 ", fixedBugs=" + fixedBugs +
                 ", defaultBugRate=" + defaultBugRate +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Employee o) {
+        return (int) (this.id - o.id);
     }
 }
